@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>عرض تقديمي - دراسة جدوى ستارز™</title>
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    
+    <!-- Google Fonts for Arabic Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* StarZ Brand Identity Variables */
+        :root {
+            --starz-black: #0D0D0D;
+            --starz-red: #E63920;
+            --starz-white: #FFFFFF;
+            --starz-dark-gray: #1E1E1E;
+            --starz-light-gray: #A0A0A0;
+        }
+
+        /* Force dark background everywhere */
+        body, .reveal, .reveal .slide-background {
+            background-color: var(--starz-black) !important;
+            font-family: 'Cairo', sans-serif !important;
+        }
+
+        /* Force white text globally for high contrast */
+        .reveal, .reveal p, .reveal li, .reveal span, .reveal div, .reveal td, .reveal strong {
+            color: var(--starz-white);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* Headings styling and colors */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: 'Cairo', sans-serif;
+            text-transform: none;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        
+        .reveal h1 { font-size: 2.2em; color: var(--starz-red) !important; }
+        .reveal h2 { font-size: 1.6em; color: var(--starz-red) !important; border-bottom: 3px solid var(--starz-red); padding-bottom: 10px; display: inline-block; }
+        .reveal h3 { font-size: 1.3em; color: var(--starz-white); }
+
+        .reveal p, .reveal li {
+            font-size: 0.85em;
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        .reveal ul { display: block; margin-right: 40px; }
+        .reveal li { margin-bottom: 15px; }
+
+        .highlight-red { color: var(--starz-red) !important; font-weight: bold; }
+
+        /* Tables styling for dark mode */
+        .reveal table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.7em;
+            background-color: var(--starz-dark-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .reveal th, .reveal td { padding: 12px 15px; border: 1px solid #333; text-align: center; }
+        .reveal th { background-color: var(--starz-red) !important; color: var(--starz-white) !important; font-weight: 700; }
+        .reveal tr:nth-child(even) { background-color: #141414; }
+
+        /* Layout Helpers */
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .flex-col { flex: 1.2; }
+        
+        /* Container for landscape/master images */
+        .brand-image-container {
+            flex: 0.8;
+            max-height: 65vh;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid var(--starz-red);
+            background-color: var(--starz-dark-gray);
+        }
+        .brand-image-container img { width: 100%; height: 100%; object-fit: cover; margin: 0; display: block; }
+        
+        /* Container for the new vertical/portrait images */
+        .portrait-image-container {
+            flex: 0.8;
+            height: 65vh;
+            border-radius: 10px;
+            border: 2px solid var(--starz-red);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            box-shadow: 0 10px 30px rgba(230, 57, 32, 0.15); /* Subtle red glow */
+        }
+        .portrait-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+            display: block;
+        }
+
+        /* Object Position Helpers for original image.png */
+        .focus-logo { object-position: top center; }
+        .focus-kiosk { object-position: bottom left; }
+
+        .slogan { font-size: 1.5em; font-weight: 900; color: var(--starz-white); text-align: center; margin-top: 40px; letter-spacing: 1px; }
+        .slogan span { color: var(--starz-red); }
+
+        .cover-slide { text-align: center; }
+        .small-text { font-size: 0.6em !important; color: var(--starz-light-gray) !important; }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section class="cover-slide">
+                <h1>دراسة الجدوى وخطة العمل الشاملة</h1>
+                <img src="cover_meal.png" alt="StarZ Cover" style="height: 380px; object-fit: cover; border-radius: 10px; margin: 15px auto; border: 2px solid var(--starz-red); box-shadow: 0 10px 30px rgba(230,57,32,0.2);">
+                <h3>ستارز™ (STARZ)</h3>
+                <p><strong>الغرض من الوثيقة:</strong> خطة عمل داخلية ودراسة جدوى تشغيلية</p>
+                <div style="margin-top: 20px; font-size: 0.7em; color: var(--starz-light-gray);">
+                    <p><strong>تاريخ الإعداد:</strong> أغسطس 2026 | <strong>الموقع:</strong> الخرطوم بحري، السودان</p>
+                    <p><strong>الجهة المعدة:</strong> المالك الحصري (StarZ™)</p>
+                </div>
+            </section>
+
+            <!-- Section 1 -->
+            <section>
+                <h2>1. الملخص التنفيذي</h2>
+                <ul>
+                    <li>يتمتع السوق السوداني بطلب عالٍ وغير ملبى على العلامات التجارية الغذائية الفاخرة والمبتكرة التي تقدم تجربة تحاكي المعايير العالمية.</li>
+                    <li>النماذج التقليدية للمطاعم تحمل مخاطر هائلة بسبب التكاليف الرأسمالية العالية (الإنشاءات والديكورات المكلفة) والأعباء التشغيلية المرتفعة.</li>
+                    <li><strong>مشروع ستارز™ يعيد صياغة هذا النموذج:</strong> علامة تجارية متخصصة في البرجر والساندوتشات ذات طابع فاخر، مبنية على هيكل تشغيلي مرن للغاية (Lean Operations).</li>
+                    <li>بفضل تأمين حقوق استغلال الموقع (100 متر مربع)، يتخلص المشروع تماماً من الضغوط المالية الشهرية للإيجارات، مما يقلل المخاطر.</li>
+                    <li>استراتيجية بناء سريع وفعّال باستخدام حاوية شحن 20 قدم كمطبخ عالي القدرة، مقترنة بتسويق هجومي.</li>
+                    <li><span class="highlight-red">الفلسفة الأساسية هي الكفاءة المطلقة لرأس المال:</span> ستارز™ يظهر بمظهر فاخر ومكلف، ليس بسبب تكاليف البناء الباهظة، بل بفضل دقة الهوية البصرية، الإضاءة الاستراتيجية، والتغليف.</li>
+                </ul>
+            </section>
+
+            <!-- Section 2: Branding (Part 1) -->
+            <section>
+                <h2>2. الهوية التجارية (1/2)</h2>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>التموضع:</strong> مفهوم "وجبات سريعة بجودة عالية" (Fast Good) يسهل الوصول إليه ويتناسب ثقافياً مع السوق، ويقدم طعماً عالمياً بأسعار مدروسة.</li>
+                            <li><strong>اسم العلامة:</strong> ستارز للبرجر والساندوتشات (STARZ Burgers & Sandwiches).</li>
+                            <li><strong>الهوية البصرية:</strong> اللون الأسود المطفي (#0D0D0D) هو المهيمن، مع طباعة باللون الأبيض الصارخ (#FFFFFF)، ولمسات جريئة باللون الأحمر (#E63920) والرمادي الداكن.</li>
+                            <li><strong>الخطوط:</strong> عريضة وحديثة (مثل Bebas Neue و Montserrat أو ما يعادلها).</li>
+                        </ul>
+                        <div class="slogan">نكهة جريئة. <span>بكل بساطة.</span></div>
+                    </div>
+                    <div class="brand-image-container">
+                        <img src="image.png" alt="StarZ Brand Colours" class="focus-logo">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Branding (Part 2) -->
+            <section>
+                <h2>2. التموضع في السوق (2/2)</h2>
+                <div class="flex-container">
+                    <div class="brand-image-container">
+                        <img src="image.png" alt="StarZ Store Design" class="focus-kiosk" style="object-position: bottom right;">
+                    </div>
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>الخطاف النفسي (Psychological Hook):</strong> الاستفادة من رغبة المستهلك المحلي في تجربة علامات تجارية تبدو عالمية وحديثة.</li>
+                            <li>سيعمل الموقع الفعلي (واجهة الكشك) <strong class="highlight-red">كلوحة إعلانية</strong>.</li>
+                            <li>المعدن المموج الأسود، والشعار الأبيض المضيء الضخم، وشرائط إضاءة (LED) الحمراء ستخلق جمالية سينمائية حضرية تتجاوز بكثير تكلفتها الإنشائية الفعلية.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Structure -->
+            <section>
+                <h2>3. الموقع والهيكل الإنشائي</h2>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <p style="color: var(--starz-red); font-weight: bold;">تقتصر البصمة المادية للمشروع بصرامة على ما يولد إيرادات ويحسن تجربة العميل.</p>
+                        <ul>
+                            <li><strong>الموقع:</strong> 10م × 10م (100 متر مربع) في الخرطوم بحري. (الحقوق مؤمنة).</li>
+                            <li><strong>المطبخ:</strong> حاوية شحن 20 قدم معدلة خصيصاً، تتميز <span class="highlight-red">بنافذة خدمة/استلام تواجه الشارع الرئيسي</span> لتسهيل طلبات التيك أواي وتطبيقات التوصيل.</li>
+                            <li><strong>الجلوس:</strong> ترتيب خارجي مريح، 4 طاولات داكنة، 20 مقعداً، 6 مقاعد بار.</li>
+                            <li><strong>فلسفة البناء:</strong> توجيه الميزانية نحو المظهر الخارجي وقوة معدات المطبخ بدلاً من التشطيبات الفاخرة.</li>
+                        </ul>
+                    </div>
+                    <div class="portrait-image-container">
+                        <img src="pickup_window.png" alt="StarZ Pickup Window">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: CAPEX -->
+            <section>
+                <h2>4. الميزانية الرأسمالية (CAPEX)</h2>
+                <p>سقف الإطلاق الأولي محدد بصرامة عند <strong class="highlight-red">56,000,000 ج.س</strong>. تزويد المطبخ بمعدات مستعملة ساعد في تكوين احتياطي نقدي صلب.</p>
+                
+                <table>
+                    <thead>
+                        <tr><th>الفئة</th><th>التفاصيل والوصف</th><th>السقف المعتمد (ج.س)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>الأرض والحاوية</td><td>التجهيز، الردميات، شراء الحاوية وتعديلها (الحدادة والعزل)</td><td>16,000,000</td></tr>
+                        <tr><td>التمديدات والجلوس</td><td>الكهرباء، السباكة، طاولات وكراسي خارجية</td><td>3,000,000</td></tr>
+                        <tr><td>معدات المطبخ</td><td>معدات مكملة، أنظمة الشفط، طاولات ستانلس</td><td>8,000,000</td></tr>
+                        <tr><td>العلامة والتغليف</td><td>اللافتات المضيئة، ومخزون تغليف فاخر أولي</td><td>7,000,000</td></tr>
+                        <tr><td>تصاريح ومخزون</td><td>رسوم بلدية وصحية، والمواد الغذائية للبداية</td><td>5,000,000</td></tr>
+                        <tr><td>رأس مال وطوارئ</td><td>احتياطي نقدي للتشغيل، وهامش مالي للطوارئ</td><td>17,000,000</td></tr>
+                        <tr><td colspan="2"><strong class="highlight-red">سقف التكلفة الإجمالية المستهدفة للافتتاح</strong></td><td class="highlight-red"><strong>56,000,000</strong></td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section 5: Operations -->
+            <section>
+                <h2>5. العمليات التشغيلية</h2>
+                <div class="flex-container">
+                    <div class="portrait-image-container" style="flex: 0.9;">
+                        <img src="kitchen_staff.png" alt="StarZ Kitchen Operations">
+                    </div>
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>الكفاءة التشغيلية:</strong> تم تصميم القائمة من أجل التجميع السريع، الاتساق العالي، وتقليل احتمالية التلوث المتبادل أو الهدر.</li>
+                            <li><strong>توحيد البروتينات:</strong> نعتمد على توحيد البروتينات الأساسية (أقراص لحم السماش، فيليه الدجاج المقرمش) وتغيير الإضافات والصلصات فقط لصنع التنوع.</li>
+                            <li><strong>خبز البرجر:</strong> يمثل الخبز نقطة تميز رئيسية. نستهدف جودة تماثل خبز الحليب الياباني طري، غني، ذو بنية ممتازة، ومثالي للتغليف والتوصيل دون أن يفقد جودته.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Menu Pricing -->
+            <section>
+                <h2>القائمة الأساسية (Menu) والتسعير</h2>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <h3 class="highlight-red">قسم اللحوم (Beef Smashburgers)</h3>
+                        <ul>
+                            <li>كلاسيك ستارز سماش برجر (مفرد) - 14,000 ج.س</li>
+                            <li>ستارز سيجنتشر سماش - 16,000 ج.س</li>
+                            <li>دبل ستارز سماش برجر - 18,000 ج.س</li>
+                        </ul>
+                        <h3 class="highlight-red" style="margin-top: 15px;">قسم الدجاج (Crispy Chicken)</h3>
+                        <ul>
+                            <li>ساندوتش دجاج مقرمش كلاسيكي - 16,000 ج.س</li>
+                            <li>ساندوتش دجاج مقرمش حار - 17,000 ج.س</li>
+                            <li>راب دجاج ستارز - 15,000 ج.س</li>
+                        </ul>
+                        <h3 class="highlight-red" style="margin-top: 15px;">الأطباق الجانبية والمشروبات</h3>
+                        <ul>
+                            <li>بطاطس (عادية/مبهرة/محملة) - 6,000 إلى 12,000 ج.س</li>
+                            <li>حلقات البصل - 8,000 ج.س | مشروبات - 4,000 ج.س</li>
+                        </ul>
+                    </div>
+                    <div class="portrait-image-container" style="flex: 0.7;">
+                        <img src="premium_burger.png" alt="StarZ Signature Burger">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Unit Economics -->
+            <section>
+                <h2>6. اقتصاديات الوحدة ونقطة التعادل</h2>
+                <p>بافتراض طلب يتكون من ساندوتش (16,000)، بطاطس (6,000)، ومشروب (4,000):</p>
+                <ul>
+                    <li><strong>متوسط قيمة الطلب (AOV):</strong> 26,000 ج.س.</li>
+                    <li><strong>تكلفة البضائع (COGS):</strong> حد أقصى 35% (9,100 ج.س للطلب المتوسط).</li>
+                    <li><strong>هامش المساهمة:</strong> 65% (16,900 ج.س ربح من كل طلب).</li>
+                </ul>
+
+                <table style="margin-top: 20px;">
+                    <tr><th>إجمالي المصروفات الثابتة (رواتب، طاقة، تسويق، إلخ)</th><th>4,000,000 ج.س / شهرياً</th></tr>
+                </table>
+
+                <div style="background-color: #141414; padding: 15px; border-radius: 8px; border: 2px solid var(--starz-red); margin-top: 15px;">
+                    <h3 class="highlight-red" style="text-align: center; margin-bottom: 5px;">تحليل نقطة التعادل</h3>
+                    <h2 style="text-align: center; margin: 0; padding: 0;">236 طلباً في الشهر</h2>
+                    <p style="text-align: center; margin-top: 5px;">بافتراض العمل 30 يوماً، يصل ستارز™ للتعادل عند بيع <strong class="highlight-red">8 طلبات يومياً فقط.</strong></p>
+                </div>
+            </section>
+
+            <!-- Section 7: Profitability -->
+            <section>
+                <h2>7. مصفوفة الربحية المستهدفة</h2>
+                <p>بمجرد تجاوز حاجز الـ 8 طلبات، يتدفق هامش المساهمة لتعظيم الأرباح.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الطلبات اليومية</th>
+                            <th>الإيراد الشهري</th>
+                            <th>التكلفة المتغيرة</th>
+                            <th>المصروفات الثابتة</th>
+                            <th>صافي الربح (ج.س)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>8 (تعادل)</td><td>6,240,000</td><td>2,184,000</td><td>4,000,000</td><td class="highlight-red"><strong>56,000</strong></td></tr>
+                        <tr><td>25 (منخفض)</td><td>19,500,000</td><td>6,825,000</td><td>4,000,000</td><td class="highlight-red"><strong>8,675,000</strong></td></tr>
+                        <tr><td>50 (أساسي)</td><td>39,000,000</td><td>13,650,000</td><td>4,000,000</td><td class="highlight-red"><strong>21,350,000</strong></td></tr>
+                        <tr><td>100 (أقصى)</td><td>78,000,000</td><td>27,300,000</td><td>4,500,000*</td><td class="highlight-red"><strong>46,200,000</strong></td></tr>
+                    </tbody>
+                </table>
+                <p class="small-text" style="margin-top: 10px;">(* زيادة المصروفات إلى 4.5 مليون لحساب استهلاك الطاقة وإمكانية إضافة موظفين إضافيين لتسريع الإنتاج).</p>
+            </section>
+
+            <!-- Section 8: Marketing (Part 1) -->
+            <section>
+                <h2>8. استراتيجية التسويق والتغليف (1/2)</h2>
+                <div class="flex-container">
+                    <div class="portrait-image-container" style="flex: 0.8;">
+                        <img src="cover_meal.png" alt="StarZ Packaging Marketing">
+                    </div>
+                    <div class="flex-col">
+                        <p style="color: var(--starz-red); font-weight: bold;">التسويق ليس نشاطاً ثانوياً؛ بل هو جوهر الاستحواذ على العملاء.</p>
+                        <ul>
+                            <li><strong>التغليف كإعلان متحرك:</strong> تم تخصيص ميزانية ضخمة (5 ملايين ج.س) للتغليف الأولي.</li>
+                            <li>التغليف ليس وظيفياً فقط، بل تم تصميمه ليكون مرئياً في أيدي العملاء، وداخل السيارات، وفي الجامعات.</li>
+                            <li>العلب والأكياس ذات اللون الأسود المطفي مع الشعار الأبيض واللمسات الحمراء تشكل إعلاناً متحركاً مجانياً يجوب الشوارع.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: Marketing (Part 2) -->
+            <section>
+                <h2>8. الاستراتيجية الرقمية والتوصيل (2/2)</h2>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>السوشيال ميديا:</strong> السوق السوداني يعتمد بشدة على المحتوى البصري. سيتم إنتاج محتوى يركز على (المنتج، التغليف، وتجربة الفتح) لخلق حالة من الطلب والندرة (Scarcity).</li>
+                            <li><strong>تجربة التوصيل (Delivery):</strong> النموذج لا يعتمد حصرياً على الجلوس.</li>
+                            <li>سيتم تحسين خدمة الطلب عبر الإنترنت و(WhatsApp) لتكون سريعة وسلسة.</li>
+                            <li>الهدف هو ضمان <span class="highlight-red">أعلى معدل دوران للطلبات (High Throughput)</span> خلال ساعات الذروة المسائية.</li>
+                        </ul>
+                    </div>
+                    <div class="portrait-image-container" style="flex: 0.8;">
+                        <img src="delivery_scooter.png" alt="StarZ Delivery Scooter">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- End Slide -->
+            <section class="cover-slide">
+                <img src="image.png" alt="StarZ Logo" style="max-height: 120px; object-fit: cover; object-position: top left; margin-bottom: 30px; border-radius: 8px;">
+                <div class="slogan" style="font-size: 2em; margin-bottom: 20px;">نهاية الوثيقة</div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            rtl: true,
+            progress: true,
+            controls: true,
+            center: true,
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+</html>
+
+
