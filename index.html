@@ -1,0 +1,4107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no,
+                   viewport-fit=cover">
+
+    <title>STARZ™ — دراسة الجدوى وخطة العمل</title>
+
+
+    <!-- =========================================================
+         STARZ™ — MOBILE PHONE PRESENTATION
+
+         NOTE:
+         This presentation is specifically designed for
+         mobile phone screens.
+
+         العرض التقديمي مصمم خصيصاً للهواتف المحمولة.
+         ========================================================= -->
+
+
+    <!-- =========================================================
+         STARZ — ASSET CONFIGURATION
+         ========================================================= -->
+
+    <script>
+
+        const ASSETS = {
+
+            // Brand
+            logo: "24655C7B-36F1-4241-900F-E0EA14542C0F.png",
+
+            // Cover / Brand
+            cover: "IMG_9261.png",
+            brandIdentity: "9E4BDE54-20AA-42B5-9C95-960069EE3FD6.png",
+
+            // Restaurant / Kiosk
+            kiosk: "IMG_9260.png",
+            kitchen: "IMG_9257.png",
+
+            // Food
+            burger: "IMG_9262.png",
+
+            // Marketing / Delivery
+            delivery: "IMG_9263.png",
+
+            // Optional
+            foodDetail: "IMG_9262.png",
+            packaging: "IMG_9261.png",
+            storefront: "IMG_9260.png",
+            operations: "IMG_9257.png"
+        };
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document
+                .querySelectorAll("[data-asset]")
+                .forEach(img => {
+
+                    const assetName = img.dataset.asset;
+
+                    if (ASSETS[assetName]) {
+                        img.src = ASSETS[assetName];
+                    }
+
+                });
+
+        });
+
+    </script>
+
+
+    <!-- =========================================================
+         ARABIC TYPOGRAPHY
+         ========================================================= -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================================
+           STARZ™ MOBILE DESIGN SYSTEM
+           ========================================================= */
+
+        :root {
+
+            --black: #0D0D0D;
+            --black-2: #111111;
+            --black-3: #171717;
+
+            --red: #E63920;
+            --red-dark: #B92D1B;
+            --red-soft: rgba(230,57,32,0.12);
+
+            --white: #FFFFFF;
+
+            --gray: #A0A0A0;
+            --gray-2: #666666;
+
+            --border: #292929;
+
+            --green: #6DBF73;
+
+            --radius: 16px;
+            --radius-small: 10px;
+
+            --shadow:
+                0 15px 40px rgba(0,0,0,0.35);
+        }
+
+
+        /* =========================================================
+           GLOBAL RESET
+           ========================================================= */
+
+        * {
+
+            box-sizing: border-box;
+
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        html {
+
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+
+            min-height: 100%;
+
+            background: var(--black);
+
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            background: var(--black);
+
+            color: var(--white);
+
+            font-family: 'Cairo', sans-serif;
+
+            overflow-x: hidden;
+
+            -webkit-font-smoothing: antialiased;
+
+            overscroll-behavior-x: none;
+        }
+
+
+        img {
+
+            max-width: 100%;
+        }
+
+
+        /* =========================================================
+           MOBILE PRESENTATION NOTICE
+           ========================================================= */
+
+        .mobile-notice {
+
+            width: 100%;
+
+            padding:
+                calc(10px + env(safe-area-inset-top))
+                18px
+                10px;
+
+            background: #151515;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            text-align: center;
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+            font-weight: 600;
+        }
+
+
+        .mobile-notice strong {
+
+            color: var(--red);
+
+            font-weight: 900;
+        }
+
+
+        /* =========================================================
+           PRESENTATION CONTAINER
+           ========================================================= */
+
+        .presentation {
+
+            width: 100%;
+
+            margin: 0;
+            padding: 0;
+
+            background: var(--black);
+        }
+
+
+        /* =========================================================
+           SLIDE
+           ========================================================= */
+
+        .slide {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 100svh;
+
+            padding:
+                62px
+                18px
+                58px;
+
+            overflow: hidden;
+
+            background: var(--black);
+
+            scroll-snap-align: start;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: flex-start;
+        }
+
+
+        /* =========================================================
+           TYPOGRAPHY
+           ========================================================= */
+
+        h1,
+        h2,
+        h3 {
+
+            font-family: 'Cairo', sans-serif;
+
+            color: var(--white);
+
+            font-weight: 900;
+
+            text-transform: none;
+        }
+
+
+        h1 {
+
+            font-size: 31px;
+
+            line-height: 1.3;
+
+            margin:
+                0
+                0
+                18px;
+        }
+
+
+        h2 {
+
+            font-size: 23px;
+
+            line-height: 1.4;
+
+            margin:
+                0
+                0
+                22px;
+        }
+
+
+        h2::after {
+
+            content: "";
+
+            display: block;
+
+            width: 45px;
+
+            height: 3px;
+
+            margin-top: 9px;
+
+            background: var(--red);
+
+            border-radius: 10px;
+        }
+
+
+        h3 {
+
+            font-size: 16px;
+
+            line-height: 1.5;
+
+            margin:
+                0
+                0
+                12px;
+        }
+
+
+        p,
+        li {
+
+            color: var(--white);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+
+        p {
+
+            margin:
+                0
+                0
+                15px;
+        }
+
+
+        ul {
+
+            margin:
+                0
+                0
+                15px;
+
+            padding-right: 20px;
+        }
+
+
+        li {
+
+            margin-bottom: 11px;
+        }
+
+
+        li::marker {
+
+            color: var(--red);
+        }
+
+
+        strong {
+
+            font-weight: 800;
+        }
+
+
+        .red {
+
+            color: var(--red) !important;
+        }
+
+
+        .muted {
+
+            color: var(--gray) !important;
+        }
+
+
+        .green {
+
+            color: var(--green) !important;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .starz-header {
+
+            position: absolute;
+
+            top:
+                calc(
+                    10px +
+                    env(safe-area-inset-top)
+                );
+
+            left: 16px;
+
+            right: 16px;
+
+            height: 34px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            z-index: 10;
+        }
+
+
+        .header-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+        }
+
+
+        .header-brand img {
+
+            width: 42px;
+
+            height: 25px;
+
+            object-fit: contain;
+        }
+
+
+        .header-brand span {
+
+            display: none;
+        }
+
+
+        .header-section {
+
+            max-width: 55%;
+
+            color: var(--gray-2);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .starz-footer {
+
+            position: absolute;
+
+            bottom:
+                calc(
+                    10px +
+                    env(safe-area-inset-bottom)
+                );
+
+            left: 16px;
+
+            right: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color: var(--gray-2);
+
+            font-size: 8px;
+
+            z-index: 10;
+        }
+
+
+        .footer-line {
+
+            flex: 1;
+
+            height: 1px;
+
+            background: var(--border);
+
+            margin:
+                0
+                9px;
+        }
+
+
+        .page-number {
+
+            color: var(--red);
+
+            font-weight: 900;
+        }
+
+
+        /* =========================================================
+           SECTION LABEL
+           ========================================================= */
+
+        .section-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            width: fit-content;
+
+            margin-bottom: 9px;
+
+            color: var(--red);
+
+            font-size: 9px;
+
+            line-height: 1.4;
+
+            font-weight: 900;
+
+            letter-spacing: 0.7px;
+        }
+
+
+        .section-label::before {
+
+            content: "";
+
+            width: 20px;
+
+            height: 2px;
+
+            background: var(--red);
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================================================
+           COVER
+           ========================================================= */
+
+        .cover-slide {
+
+            min-height: 100svh;
+
+            padding:
+                65px
+                20px
+                45px;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(230,57,32,0.12),
+                    transparent 40%
+                );
+        }
+
+
+        .cover-header {
+
+            position: absolute;
+
+            top:
+                calc(
+                    15px +
+                    env(safe-area-inset-top)
+                );
+
+            left: 18px;
+
+            right: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .cover-header img {
+
+            width: 70px;
+
+            height: 35px;
+
+            object-fit: contain;
+        }
+
+
+        .cover-kicker {
+
+            color: var(--red);
+
+            font-size: 8px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+
+        .cover-image {
+
+            width: 92vw;
+
+            max-width: 420px;
+
+            height: 28svh;
+
+            min-height: 170px;
+
+            margin:
+                12px
+                0
+                18px;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            border-radius: 18px;
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            background: var(--black-2);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .cover-title {
+
+            max-width: 95%;
+
+            font-size: 29px;
+        }
+
+
+        .cover-title .accent {
+
+            color: var(--red);
+        }
+
+
+        .cover-meta {
+
+            color: var(--gray) !important;
+
+            font-size: 10px !important;
+
+            line-height: 1.9 !important;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================================================
+           INDEX
+           ========================================================= */
+
+        .index-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 8px;
+
+            margin-top: 15px;
+        }
+
+
+        .index-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            padding:
+                10px
+                12px;
+
+            background: var(--black-2);
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-radius: var(--radius-small);
+        }
+
+
+        .index-number {
+
+            width: 34px;
+
+            height: 34px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 8px;
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-size: 11px;
+
+            font-weight: 900;
+        }
+
+
+        .index-name {
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .index-desc {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: var(--gray);
+
+            font-size: 9px;
+        }
+
+
+        /* =========================================================
+           TWO COLUMN
+           ========================================================= */
+
+        .two-column,
+        .two-column.reverse {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+
+            width: 100%;
+
+            height: auto;
+
+            align-items: stretch;
+        }
+
+
+        .content-column {
+
+            width: 100%;
+
+            min-width: 0;
+
+            order: 1;
+        }
+
+
+        .visual-column {
+
+            width: 100%;
+
+            min-width: 0;
+
+            height: auto;
+
+            order: 2;
+        }
+
+
+        .two-column.reverse .visual-column {
+
+            order: 1;
+        }
+
+
+        .two-column.reverse .content-column {
+
+            order: 2;
+        }
+
+
+        /* =========================================================
+           IMAGE CARDS
+           ========================================================= */
+
+        .image-card {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 180px;
+
+            max-height: 42svh;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--black-2);
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .image-card img {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            max-height: 42svh;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            background: var(--black-2);
+        }
+
+
+        .image-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.55),
+                    transparent 50%
+                );
+
+            pointer-events: none;
+        }
+
+
+        .image-caption {
+
+            position: absolute;
+
+            right: 12px;
+
+            left: 12px;
+
+            bottom: 10px;
+
+            z-index: 2;
+
+            color: var(--white);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            text-shadow:
+                0 2px 8px rgba(0,0,0,0.8);
+        }
+
+
+        /* =========================================================
+           FEATURE BOX
+           ========================================================= */
+
+        .feature-box {
+
+            margin:
+                12px
+                0;
+
+            padding:
+                12px
+                14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--black-2),
+                    var(--black-3)
+                );
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-right:
+                3px
+                solid
+                var(--red);
+
+            border-radius:
+                var(--radius-small);
+        }
+
+
+        .feature-box p {
+
+            margin: 0;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           STAT CARDS
+           ========================================================= */
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 7px;
+
+            margin:
+                15px
+                0;
+        }
+
+
+        .stat-card {
+
+            padding:
+                12px
+                6px;
+
+            text-align: center;
+
+            background: var(--black-2);
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-radius:
+                var(--radius-small);
+        }
+
+
+        .stat-value {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: var(--red);
+
+            font-size: 15px;
+
+            line-height: 1.2;
+
+            font-weight: 900;
+
+            overflow-wrap: anywhere;
+        }
+
+
+        .stat-label {
+
+            display: block;
+
+            color: var(--gray);
+
+            font-size: 8px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =========================================================
+           TABLES
+           ========================================================= */
+
+        .table-wrapper {
+
+            width: 100%;
+
+            margin-top: 10px;
+
+            overflow-x: auto;
+
+            overflow-y: hidden;
+
+            -webkit-overflow-scrolling: touch;
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-radius:
+                var(--radius-small);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        table {
+
+            width: 100%;
+
+            min-width: 650px;
+
+            margin: 0;
+
+            border-collapse: collapse;
+
+            background: var(--black-2);
+
+            font-size: 11px;
+        }
+
+
+        th,
+        td {
+
+            padding:
+                9px
+                10px;
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            text-align: center;
+
+            color: var(--white);
+        }
+
+
+        th {
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-weight: 900;
+        }
+
+
+        tr:nth-child(even) td {
+
+            background: #141414;
+        }
+
+
+        tr:last-child td {
+
+            background: #191919;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           MENU
+           ========================================================= */
+
+        .menu-section {
+
+            margin-bottom: 8px;
+
+            padding:
+                12px
+                13px;
+
+            background: var(--black-2);
+
+            border:
+                1px
+                solid
+                var(--border);
+
+            border-radius:
+                var(--radius-small);
+        }
+
+
+        .menu-title {
+
+            margin-bottom: 5px;
+
+            color: var(--red);
+
+            font-size: 11px;
+
+            font-weight: 900;
+        }
+
+
+        .menu-item {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+
+            padding:
+                4px
+                0;
+
+            border-bottom:
+                1px
+                solid
+                #222;
+
+            font-size: 10px;
+
+            line-height: 1.5;
+        }
+
+
+        .menu-item:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .price {
+
+            color: var(--red);
+
+            font-weight: 900;
+
+            white-space: nowrap;
+
+            margin-right: 8px;
+        }
+
+
+        /* =========================================================
+           BREAK EVEN
+           ========================================================= */
+
+        .break-even {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding:
+                18px
+                12px;
+
+            margin-top: 15px;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(230,57,32,0.15),
+                    transparent 65%
+                );
+
+            border:
+                1px
+                solid
+                var(--red);
+
+            border-radius:
+                var(--radius);
+        }
+
+
+        .break-even-label {
+
+            color: var(--gray);
+
+            font-size: 10px;
+        }
+
+
+        .break-even-value {
+
+            margin:
+                5px
+                0;
+
+            color: var(--red);
+
+            font-size: 21px;
+
+            line-height: 1.5;
+
+            font-weight: 900;
+        }
+
+
+        .break-even-sub {
+
+            color: var(--white);
+
+            font-size: 10px;
+        }
+
+
+        .break-even p {
+
+            font-size: 11px !important;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           END SLIDE
+           ========================================================= */
+
+        .end-slide {
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(230,57,32,0.12),
+                    transparent 45%
+                );
+        }
+
+
+        .end-slide img {
+
+            width: 110px;
+
+            max-height: 65px;
+
+            object-fit: contain;
+
+            margin-bottom: 22px;
+        }
+
+
+        .end-title {
+
+            color: var(--white);
+
+            font-size: 28px;
+
+            line-height: 1.4;
+
+            font-weight: 900;
+        }
+
+
+        .end-title span {
+
+            color: var(--red);
+        }
+
+
+        .end-slide p {
+
+            font-size: 10px !important;
+        }
+
+
+        /* =========================================================
+           VERY SMALL PHONES
+           ========================================================= */
+
+        @media (max-width: 380px) {
+
+            .slide {
+
+                padding:
+                    58px
+                    14px
+                    50px;
+            }
+
+
+            h1 {
+
+                font-size: 27px;
+            }
+
+
+            h2 {
+
+                font-size: 21px;
+            }
+
+
+            p,
+            li {
+
+                font-size: 13px;
+
+                line-height: 1.8;
+            }
+
+
+            .cover-image {
+
+                min-height: 145px;
+
+                height: 25svh;
+            }
+
+
+            .stats-grid {
+
+                gap: 5px;
+            }
+
+
+            .stat-card {
+
+                padding:
+                    10px
+                    4px;
+            }
+
+
+            .stat-value {
+
+                font-size: 13px;
+            }
+
+
+            .stat-label {
+
+                font-size: 7px;
+            }
+
+        }
+
+
+        /* =========================================================
+           LANDSCAPE PHONE
+           ========================================================= */
+
+        @media (orientation: landscape)
+               and (max-height: 600px) {
+
+            .slide {
+
+                min-height: 100svh;
+
+                padding:
+                    48px
+                    20px
+                    42px;
+            }
+
+
+            .cover-slide {
+
+                padding:
+                    48px
+                    20px
+                    40px;
+            }
+
+
+            .cover-image {
+
+                height: 35svh;
+
+                min-height: 130px;
+            }
+
+
+            .image-card {
+
+                max-height: 55svh;
+            }
+
+
+            .image-card img {
+
+                max-height: 55svh;
+            }
+
+        }
+
+
+        /* =========================================================
+           DESKTOP WARNING
+           ========================================================= */
+
+        @media (min-width: 601px) {
+
+            body::before {
+
+                content:
+                    "هذا العرض التقديمي مصمم خصيصاً للهواتف المحمولة. يرجى فتحه على هاتف للحصول على أفضل تجربة.";
+
+                position: fixed;
+
+                inset: 0;
+
+                z-index: 99999;
+
+                display: flex;
+
+                align-items: center;
+
+                justify-content: center;
+
+                padding: 40px;
+
+                background: var(--black);
+
+                color: var(--white);
+
+                text-align: center;
+
+                font-family: 'Cairo', sans-serif;
+
+                font-size: 22px;
+
+                font-weight: 700;
+
+                line-height: 1.8;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PRESENTATION NOTE
+     ========================================================= -->
+
+<div class="mobile-notice">
+
+    <strong>ملاحظة:</strong>
+
+    تم تصميم هذا العرض التقديمي خصيصاً للعرض على شاشات
+    الهواتف المحمولة.
+
+    يُنصح بعرضه على الهاتف بوضع ملء الشاشة للحصول على
+    أفضل تجربة.
+
+</div>
+
+
+<!-- =========================================================
+     PRESENTATION
+     ========================================================= -->
+
+<main class="presentation">
+
+
+    <!-- =====================================================
+         01 — COVER
+         ===================================================== -->
+
+    <section class="slide cover-slide">
+
+        <div class="cover-header">
+
+            <img
+                data-asset="logo"
+                alt="STARZ Logo">
+
+            <div class="cover-kicker">
+                STARZ™ / BUSINESS PLAN
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            أغسطس 2026
+        </div>
+
+
+        <h1 class="cover-title">
+
+            دراسة الجدوى
+
+            <br>
+
+            <span class="accent">
+                وخطة العمل الشاملة
+            </span>
+
+        </h1>
+
+
+        <img
+            data-asset="cover"
+            class="cover-image"
+            alt="STARZ">
+
+
+        <h3>
+            ستارز™ — STARZ Burgers & Sandwiches
+        </h3>
+
+
+        <p class="cover-meta">
+
+            تاريخ الإعداد: أغسطس 2026
+
+            <br>
+
+            الموقع: الخرطوم، السودان
+
+            <br>
+
+            الجهة المعدة: المالك الحصري — StarZ™
+
+            <br>
+
+            الغرض من الوثيقة: خطة عمل داخلية ودراسة جدوى تشغيلية
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — INDEX
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                محتويات الوثيقة
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            00 / INDEX
+        </div>
+
+
+        <h2>
+            محتويات الوثيقة
+        </h2>
+
+
+        <div class="index-grid">
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    01
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        الملخص التنفيذي
+                    </div>
+
+                    <span class="index-desc">
+                        الرؤية والنموذج الأساسي للمشروع
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    02
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        الهوية التجارية
+                    </div>
+
+                    <span class="index-desc">
+                        التموضع والهوية البصرية
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    03
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        الموقع والهيكل
+                    </div>
+
+                    <span class="index-desc">
+                        الموقع والحاوية وتجربة العميل
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    04
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        الميزانية الرأسمالية
+                    </div>
+
+                    <span class="index-desc">
+                        CAPEX وسقف الإطلاق
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    05
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        العمليات التشغيلية
+                    </div>
+
+                    <span class="index-desc">
+                        المطبخ والقائمة والإنتاج
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    06
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        اقتصاديات الوحدة
+                    </div>
+
+                    <span class="index-desc">
+                        AOV و COGS ونقطة التعادل
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    07
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        الربحية المستهدفة
+                    </div>
+
+                    <span class="index-desc">
+                        سيناريوهات المبيعات والأرباح
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="index-item">
+
+                <div class="index-number">
+                    08
+                </div>
+
+                <div>
+
+                    <div class="index-name">
+                        التسويق والتوصيل
+                    </div>
+
+                    <span class="index-desc">
+                        التغليف والسوشيال ميديا والتوصيل
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                02
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         03 — EXECUTIVE SUMMARY 1
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الملخص التنفيذي (1/2)
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            01 / EXECUTIVE SUMMARY
+        </div>
+
+
+        <h2>
+            الملخص التنفيذي
+        </h2>
+
+
+        <div class="two-column">
+
+
+            <div class="content-column">
+
+                <ul>
+
+                    <li>
+                        يتمتع السوق السوداني بطلب عالٍ وغير ملبى
+                        على العلامات التجارية الغذائية الفاخرة
+                        والمبتكرة التي تقدم تجربة تحاكي المعايير العالمية.
+                    </li>
+
+                    <li>
+                        ومع ذلك، فإن النماذج التقليدية للمطاعم تحمل
+                        مخاطر هائلة بسبب التكاليف الرأسمالية العالية
+                        (الإنشاءات والديكورات المكلفة) والأعباء التشغيلية المرتفعة.
+                    </li>
+
+                    <li>
+                        <strong>
+                            مشروع ستارز™ يعيد صياغة هذا النموذج.
+                        </strong>
+
+                        نحن نطلق علامة تجارية متخصصة في البرجر
+                        والساندوتشات ذات طابع فاخر، مبنية على هيكل
+                        تشغيلي مرن للغاية (Lean Operations).
+                    </li>
+
+                    <li>
+                        بفضل تأمين حقوق استغلال الموقع
+                        (قطعة أرض بمساحة 100 متر مربع)، يتخلص
+                        المشروع تماماً من الضغوط المالية الشهرية
+                        المرتبطة بالمواقع التجارية، مما يقلل المخاطر
+                        التشغيلية إلى أدنى حد ممكن.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="cover"
+                        alt="STARZ">
+
+                    <div class="image-caption">
+                        STARZ — Premium appearance / Lean operations
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>STARZ™</span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                03
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         04 — EXECUTIVE SUMMARY 2
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الملخص التنفيذي (2/2)
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            01 / EXECUTIVE SUMMARY
+        </div>
+
+
+        <h2>
+            الملخص التنفيذي (تابع)
+        </h2>
+
+
+        <div class="two-column">
+
+
+            <div class="content-column">
+
+                <ul>
+
+                    <li>
+                        نعتمد استراتيجية بناء سريع وفعّال باستخدام
+                        حاوية شحن 20 قدم كمطبخ عالي القدرة،
+                        مقترنة باستراتيجية تسويق هجومية تعتمد
+                        في المقام الأول على منصات التواصل الاجتماعي
+                        وتغليف ذي جودة استثنائية.
+                    </li>
+
+                </ul>
+
+
+                <div class="feature-box">
+
+                    <p>
+
+                        <strong class="red">
+                            الفلسفة الأساسية هي الكفاءة المطلقة لرأس المال:
+                        </strong>
+
+                        ستارز™ يظهر بمظهر فاخر ومكلف،
+                        ليس بسبب تكاليف البناء الباهظة،
+                        بل بفضل دقة الهوية البصرية (Branding)،
+                        والإضاءة الاستراتيجية، والتغليف عالي الجودة.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>STARZ™</span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                04
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         05 — BRAND IDENTITY
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الهوية التجارية
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            02 / BRAND IDENTITY
+        </div>
+
+
+        <h2>
+            الهوية التجارية
+        </h2>
+
+
+        <div class="two-column reverse">
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="brandIdentity"
+                        alt="STARZ Brand Identity">
+
+                    <div class="image-caption">
+                        STARZ™ — الهوية البصرية
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-column">
+
+                <ul>
+
+                    <li>
+                        ستارز™ ليس مطعماً فاخراً بالمعنى التقليدي
+                        (Luxury)؛ بل هو مفهوم "وجبات سريعة بجودة عالية"
+                        (Fast Good) يسهل الوصول إليه ويتناسب ثقافياً
+                        مع السوق، ويقدم طعماً عالمياً بأسعار مدروسة.
+                    </li>
+
+                    <li>
+                        <strong>
+                            اسم العلامة التجارية:
+                        </strong>
+
+                        ستارز للبرجر والساندوتشات
+                        (STARZ Burgers & Sandwiches).
+                    </li>
+
+                    <li>
+                        <strong>
+                            الهوية البصرية:
+                        </strong>
+
+                        اللون الأسود المطفي (#0D0D0D) هو المهيمن،
+                        مع طباعة باللون الأبيض الصارخ (#FFFFFF)،
+                        ولمسات جريئة باللون الأحمر (#E63920)
+                        والرمادي الداكن.
+                    </li>
+
+                    <li>
+                        <strong>
+                            خطوط الطباعة (Typography):
+                        </strong>
+
+                        خطوط عريضة وحديثة مثل Bebas Neue
+                        وMontserrat أو ما يعادلها هندسياً في العربية.
+                    </li>
+
+                </ul>
+
+
+                <div class="feature-box">
+
+                    <h3 class="red">
+                        الشعار اللفظي (Slogan):
+                    </h3>
+
+                    <p>
+                        "نكهة جريئة. بكل بساطة."
+                        <br>
+                        (Bold Flavor. Made Easy.)
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — BRAND
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                05
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         06 — MARKET POSITIONING
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                التموضع في السوق
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            02 / MARKET POSITIONING
+        </div>
+
+
+        <h2>
+            التموضع في السوق
+        </h2>
+
+
+        <div class="two-column">
+
+
+            <div class="content-column">
+
+                <div class="feature-box">
+
+                    <h3 class="red">
+                        الخطاف النفسي (Psychological Hook)
+                    </h3>
+
+                    <p>
+                        الاستفادة من رغبة المستهلك المحلي في تجربة
+                        علامات تجارية تبدو عالمية وحديثة.
+                        إذا رسخ ستارز™ في ذهن المستهلك — عبر التواجد
+                        القوي على وسائل التواصل الاجتماعي والتغليف
+                        الجذاب للغاية — فإن العملاء سيقصدون الموقع
+                        خصيصاً.
+                    </p>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+                        سيعمل الموقع الفعلي
+                        (واجهة الكشك)
+                        <strong class="red">
+                            كلوحة إعلانية
+                        </strong>.
+                    </li>
+
+                    <li>
+                        المعدن المموج الأسود، والشعار الأبيض
+                        المضيء الضخم، وشرائط إضاءة (LED) الحمراء
+                        ستخلق جمالية سينمائية حضرية تتجاوز
+                        بكثير تكلفتها الإنشائية الفعلية.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="storefront"
+                        alt="STARZ Storefront">
+
+                    <div class="image-caption">
+                        الواجهة كوسيلة تسويقية
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — POSITIONING
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                06
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         07 — LOCATION & STRUCTURE
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الموقع والهيكل
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            03 / SITE & STRUCTURE
+        </div>
+
+
+        <h2>
+            الموقع والهيكل الإنشائي
+            (النموذج المرن)
+        </h2>
+
+
+        <div class="two-column reverse">
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="kiosk"
+                        alt="STARZ Kiosk">
+
+                    <div class="image-caption">
+                        STARZ — واجهة الخدمة والاستلام
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-column">
+
+                <p>
+                    تقتصر البصمة المادية للمشروع بصرامة على ما
+                    يولد إيرادات ويحسن تجربة العميل، متجنبين أي
+                    تعقيدات معمارية لا تساهم في جودة الطعام أو
+                    راحة العميل.
+                </p>
+
+
+                <ul>
+
+                    <li>
+
+                        <strong>
+                            الموقع:
+                        </strong>
+
+                        مساحة 10م × 10م
+                        (100 متر مربع)
+                        في الخرطوم.
+                        (حقوق استغلال الموقع مؤمنة).
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            المطبخ:
+                        </strong>
+
+                        حاوية شحن 20 قدم معدلة خصيصاً،
+                        تتميز
+                        <span class="red">
+                            بنافذة خدمة/استلام تواجه الشارع الرئيسي
+                        </span>
+                        لتسهيل طلبات التيك أواي وتطبيقات التوصيل.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            منطقة العملاء:
+                        </strong>
+
+                        ترتيب جلوس خارجي مريح ومضاء بإضاءة دافئة،
+                        يضم 4 طاولات داكنة، 20 مقعداً، و6 مقاعد بار
+                        (Stools)، مع تنسيق حدائق أساسي (Planters).
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            فلسفة البناء:
+                        </strong>
+
+                        التركيز على استخدام مواد البناء والتصنيع
+                        المحلي (الخرسانة، الرمل، الحدادة المحلية)،
+                        وتوجيه الميزانية نحو المظهر الخارجي وقوة
+                        معدات المطبخ بدلاً من التشطيبات الفاخرة
+                        غير الضرورية.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — SITE
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                07
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         08 — CAPEX
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الميزانية الرأسمالية (CAPEX)
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            04 / CAPITAL EXPENDITURE
+        </div>
+
+
+        <h2>
+            الميزانية الرأسمالية (CAPEX)
+        </h2>
+
+
+        <p>
+
+            تم تحديد سقف الإطلاق الأولي بصرامة عند
+            <strong class="red">
+                56,000,000 جنيه سوداني
+            </strong>
+
+            (ما يعادل 10,000 دولار أمريكي كمعيار تخطيطي).
+
+            من خلال تزويد المطبخ بمعدات أساسية مملوكة مسبقاً
+            (شواية، قلاية، ثلاجة، فريزر، فرن)، نجحنا في تحويل
+            جزء كبير من الميزانية لتكوين احتياطي نقدي صلب
+            يضمن استمرارية العمل.
+
+        </p>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            الفئة
+                        </th>
+
+                        <th>
+                            التفاصيل والوصف
+                        </th>
+
+                        <th>
+                            السقف المعتمد
+                            <br>
+                            (ج.س)
+                        </th>
+
+                        <th>
+                            الحالة
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            الموقع والأرض
+                        </td>
+
+                        <td>
+                            تجهيز الأرض، الردميات
+                            (خرسانة ورمل)، التسوية،
+                            وبناء الأسوار
+                        </td>
+
+                        <td>
+                            5,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            هيكل الحاوية
+                        </td>
+
+                        <td>
+                            شراء حاوية 20 قدم فارغة
+                        </td>
+
+                        <td>
+                            8,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            تجهيز الحاوية
+                        </td>
+
+                        <td>
+                            التعديلات، القص، الحدادة،
+                            العزل، ونوافذ الخدمة
+                        </td>
+
+                        <td>
+                            3,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            التمديدات والجلوس
+                        </td>
+
+                        <td>
+                            أعمال الكهرباء، السباكة،
+                            وتوفير طاولات وكراسي خارجية
+                        </td>
+
+                        <td>
+                            3,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            معدات المطبخ
+                        </td>
+
+                        <td>
+                            معدات مكملة، أنظمة الشفط،
+                            طاولات ستانلس ستيل
+                        </td>
+
+                        <td>
+                            8,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            العلامة التجارية
+                        </td>
+
+                        <td>
+                            اللافتات المضيئة الرئيسية،
+                            الإضاءة الخارجية والديكورية
+                        </td>
+
+                        <td>
+                            2,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            التغليف
+                        </td>
+
+                        <td>
+                            مخزون أولي لتغليف فاخر
+                            (علب برجر، أكياس، ورق تغليف)
+                        </td>
+
+                        <td>
+                            5,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            التصاريح الحكومية
+                        </td>
+
+                        <td>
+                            الرسوم البلدية، التصاريح الصحية،
+                            وتسجيل الأعمال
+                        </td>
+
+                        <td>
+                            3,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            المخزون الأولي
+                        </td>
+
+                        <td>
+                            المواد الغذائية والمكونات
+                            لأول أيام التشغيل
+                        </td>
+
+                        <td>
+                            2,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            رأس المال العامل
+                        </td>
+
+                        <td>
+                            احتياطي نقدي / مدرج تشغيلي
+                            (Runway) لضمان الاستمرارية
+                        </td>
+
+                        <td>
+                            15,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            الطوارئ
+                        </td>
+
+                        <td>
+                            هامش مالي للحالات غير المتوقعة
+                            (Unforeseen Buffer)
+                        </td>
+
+                        <td>
+                            2,000,000
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td colspan="2">
+
+                            <strong class="red">
+                                الإجمالي
+                                (سقف التكلفة الإجمالية المستهدفة للافتتاح)
+                            </strong>
+
+                        </td>
+
+                        <td>
+
+                            <strong class="red">
+                                56,000,000
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            مؤكد
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — CAPEX
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                08
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         09 — OPERATIONS
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                العمليات التشغيلية
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            05 / OPERATIONS
+        </div>
+
+
+        <h2>
+            العمليات التشغيلية
+        </h2>
+
+
+        <div class="two-column reverse">
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="operations"
+                        alt="STARZ Kitchen Operations">
+
+                    <div class="image-caption">
+                        Lean Kitchen Operations
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-column">
+
+                <div class="feature-box">
+
+                    <p>
+                        لتحقيق أقصى درجات الكفاءة التشغيلية،
+                        تم تصميم القائمة من أجل التجميع السريع،
+                        الاتساق العالي، وتقليل احتمالية التلوث
+                        المتبادل أو الهدر.
+                    </p>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+
+                        <strong>
+                            توحيد البروتينات:
+                        </strong>
+
+                        نعتمد على توحيد البروتينات الأساسية
+                        (أقراص لحم السماش، فيليه الدجاج المقرمش)
+                        وتغيير الإضافات والصلصات فقط لصنع التنوع.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            خبز البرجر (The Bun):
+                        </strong>
+
+                        يمثل الخبز نقطة تميز رئيسية للمشروع.
+                        نستهدف جودة تماثل خبز الحليب الياباني
+                        (Japanese Milk Buns) - طري، غني، ذو بنية ممتازة،
+                        ومثالي للتغليف والتوصيل دون أن يفقد جودته.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — OPERATIONS
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                09
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         10 — MENU
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                القائمة والتسعير
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            05 / MENU & PRICING
+        </div>
+
+
+        <h2>
+            تسعير القائمة المستهدفة للافتتاح
+        </h2>
+
+
+        <div class="two-column">
+
+
+            <div class="content-column">
+
+
+                <div class="menu-section">
+
+                    <div class="menu-title">
+                        قسم اللحوم
+                        (Beef Smashburgers)
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            كلاسيك ستارز سماش برجر
+                            (مفرد)
+                        </span>
+
+                        <span class="price">
+                            14,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            ستارز سيجنتشر سماش
+                            (صلصة خاصة وجبن)
+                        </span>
+
+                        <span class="price">
+                            16,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            دبل ستارز سماش برجر
+                            (لحم مزدوج)
+                        </span>
+
+                        <span class="price">
+                            18,000 ج.س
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="menu-section">
+
+                    <div class="menu-title">
+                        قسم الدجاج
+                        (Crispy Chicken)
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            ساندوتش دجاج مقرمش كلاسيكي
+                        </span>
+
+                        <span class="price">
+                            16,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            ساندوتش دجاج مقرمش حار
+                        </span>
+
+                        <span class="price">
+                            17,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            راب دجاج ستارز (Wrap)
+                        </span>
+
+                        <span class="price">
+                            15,000 ج.س
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="menu-section">
+
+                    <div class="menu-title">
+                        الأطباق الجانبية (Sides)
+                        والمشروبات
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            بطاطس عادية
+                        </span>
+
+                        <span class="price">
+                            6,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            بطاطس مبهرة | حلقات البصل
+                        </span>
+
+                        <span class="price">
+                            8,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            بطاطس محملة
+                            (Loaded Fries)
+                        </span>
+
+                        <span class="price">
+                            12,000 ج.س
+                        </span>
+
+                    </div>
+
+
+                    <div class="menu-item">
+
+                        <span>
+                            مشروبات غازية معلبة / مياه
+                        </span>
+
+                        <span class="price">
+                            4,000 ج.س
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="burger"
+                        alt="STARZ Signature Burger">
+
+                    <div class="image-caption">
+                        STARZ™ — Signature Burger
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — MENU
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                10
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         11 — UNIT ECONOMICS
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                اقتصاديات الوحدة
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            06 / UNIT ECONOMICS
+        </div>
+
+
+        <h2>
+            اقتصاديات الوحدة ونقطة التعادل
+            (Unit Economics)
+        </h2>
+
+
+        <p>
+
+            يتمثل جوهر نجاح ستارز™ في التحكم الصارم
+            بتكلفة البضائع وتخفيض المصروفات الثابتة.
+
+            بافتراض أن طلب العميل العادي يتكون من
+            ساندوتش (16,000)، وبطاطس عادية (6,000)،
+            ومشروب (4,000):
+
+        </p>
+
+
+        <div class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <span class="stat-value">
+                    26,000
+                </span>
+
+                <span class="stat-label">
+                    متوسط قيمة الطلب AOV
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-value">
+                    35%
+                </span>
+
+                <span class="stat-label">
+                    الحد الأقصى لـ COGS
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-value">
+                    65%
+                </span>
+
+                <span class="stat-label">
+                    هامش المساهمة
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <ul>
+
+            <li>
+
+                <strong>
+                    متوسط قيمة الطلب (AOV):
+                </strong>
+
+                26,000 ج.س.
+
+            </li>
+
+
+            <li>
+
+                نحن نفرض حداً أقصى لتكلفة البضائع المباعة
+                (COGS) يبلغ <strong>35%</strong>
+                (شاملة المكونات والتغليف الفاخر)،
+                أي ما لا يتجاوز 9,100 ج.س للطلب المتوسط.
+
+            </li>
+
+
+            <li>
+
+                <strong>
+                    هامش المساهمة الإجمالي
+                    (Contribution Margin):
+                </strong>
+
+                65%
+                (أو 16,900 ج.س ربح من كل طلب).
+
+            </li>
+
+        </ul>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — UNIT ECONOMICS
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                11
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         12 — OPEX & BREAK EVEN
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                OPEX ونقطة التعادل
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            06 / BREAK-EVEN
+        </div>
+
+
+        <h2>
+            المصاريف ونقطة التعادل
+        </h2>
+
+
+        <h3 class="red">
+            المصاريف التشغيلية الشهرية الثابتة (OPEX):
+        </h3>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            الإيجار
+                        </td>
+
+                        <td>
+                            0 ج.س
+                            (حقوق استغلال الموقع مؤمنة)
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            الرواتب
+                            (3 موظفين مبدئياً)
+                        </td>
+
+                        <td>
+                            1,500,000 ج.س
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            الكهرباء ووقود المولد
+                        </td>
+
+                        <td>
+                            1,500,000 ج.س
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            التسويق والسوشيال ميديا
+                        </td>
+
+                        <td>
+                            500,000 ج.س
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            الإنترنت ونظام نقاط البيع (POS)
+                        </td>
+
+                        <td>
+                            150,000 ج.س
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            الصيانة والمصروفات النثرية
+                        </td>
+
+                        <td>
+                            350,000 ج.س
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong class="red">
+                                إجمالي المصروفات الثابتة
+                            </strong>
+                        </td>
+
+                        <td>
+
+                            <strong class="red">
+                                4,000,000 ج.س / شهرياً
+                            </strong>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="break-even">
+
+            <div class="break-even-label">
+
+                تحليل نقطة التعادل
+                (Break-Even):
+
+            </div>
+
+
+            <div class="break-even-value">
+
+                4,000,000 ج.س
+                (مصروفات)
+
+                ÷
+
+                16,900 ج.س
+                (هامش مساهمة)
+
+                =
+
+                <span
+                    style="
+                        font-size:1.5em;
+                        display:block;
+                        margin-top:10px;
+                    ">
+
+                    236 طلباً في الشهر
+
+                </span>
+
+            </div>
+
+
+            <p>
+
+                بافتراض العمل 30 يوماً في الشهر،
+                يصل ستارز™ لنقطة التعادل عند بيع
+                <strong class="red">
+                    8 طلبات يومياً فقط.
+                </strong>
+
+                <br>
+
+                (الاستنتاج: عتبة التعادل منخفضة للغاية،
+                مما يجعل المشروع آمناً تشغيلياً وقادراً
+                على الاستمرار حتى في فترات الركود).
+
+            </p>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — BREAK-EVEN
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                12
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         13 — PROFITABILITY
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الربحية
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            07 / PROFITABILITY
+        </div>
+
+
+        <h2>
+            مصفوفة الربحية المستهدفة
+        </h2>
+
+
+        <p>
+
+            بمجرد تجاوز حاجز الـ 8 طلبات يومياً،
+            يتدفق هامش المساهمة مباشرة لتعظيم صافي الأرباح.
+            يوضح الجدول التالي سيناريوهات التوسع:
+
+        </p>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            الطلبات اليومية
+                        </th>
+
+                        <th>
+                            الإيراد الشهري
+                        </th>
+
+                        <th>
+                            التكلفة المتغيرة
+                            (35%)
+                        </th>
+
+                        <th>
+                            المصروفات الثابتة
+                        </th>
+
+                        <th>
+                            صافي الربح الشهري
+                            (ج.س)
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            8
+                            <br>
+                            (نقطة التعادل)
+                        </td>
+
+                        <td>
+                            6,240,000
+                        </td>
+
+                        <td>
+                            2,184,000
+                        </td>
+
+                        <td>
+                            4,000,000
+                        </td>
+
+                        <td class="red">
+                            <strong>
+                                56,000
+                            </strong>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            25
+                            <br>
+                            (هدف منخفض)
+                        </td>
+
+                        <td>
+                            19,500,000
+                        </td>
+
+                        <td>
+                            6,825,000
+                        </td>
+
+                        <td>
+                            4,000,000
+                        </td>
+
+                        <td class="red">
+                            <strong>
+                                8,675,000
+                            </strong>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            50
+                            <br>
+                            (هدف أساسي)
+                        </td>
+
+                        <td>
+                            39,000,000
+                        </td>
+
+                        <td>
+                            13,650,000
+                        </td>
+
+                        <td>
+                            4,000,000
+                        </td>
+
+                        <td class="red">
+                            <strong>
+                                21,350,000
+                            </strong>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            100
+                            <br>
+                            (هدف أقصى)
+                        </td>
+
+                        <td>
+                            78,000,000
+                        </td>
+
+                        <td>
+                            27,300,000
+                        </td>
+
+                        <td>
+                            4,500,000*
+                        </td>
+
+                        <td class="red">
+                            <strong>
+                                46,200,000
+                            </strong>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="feature-box">
+
+            <p class="muted">
+
+                (ملاحظة: عند الوصول لـ 100 طلب يومياً،
+                تمت زيادة المصروفات الثابتة إلى 4.5 مليون ج.س
+                لحساب الزيادة في استهلاك الطاقة وإمكانية
+                إضافة موظفين إضافيين لتسريع الإنتاج).
+
+            </p>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — PROFITABILITY
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                13
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         14 — PACKAGING & MARKETING
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                التسويق والتغليف
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            08 / MARKETING & PACKAGING STRATEGY
+        </div>
+
+
+        <h2>
+            استراتيجية التسويق والتغليف
+        </h2>
+
+
+        <div class="two-column reverse">
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="packaging"
+                        alt="STARZ Packaging">
+
+                    <div class="image-caption">
+                        التغليف كإعلان متحرك
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-column">
+
+                <div class="feature-box">
+
+                    <p>
+
+                        <strong class="red">
+                            التسويق في مشروع ستارز ليس نشاطاً ثانوياً؛
+                            بل هو جوهر عملية الاستحواذ على العملاء.
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+
+                        <strong>
+                            التغليف كإعلان متحرك
+                            (Mobile Advertising):
+                        </strong>
+
+                        تم تخصيص ميزانية ضخمة
+                        (5 ملايين ج.س)
+                        للتغليف الأولي.
+
+                    </li>
+
+
+                    <li>
+
+                        التغليف ليس وظيفياً فقط،
+                        بل تم تصميمه ليكون مرئياً في أيدي العملاء،
+                        وداخل السيارات، وفي الجامعات القريبة.
+
+                    </li>
+
+
+                    <li>
+
+                        العلب والأكياس ذات اللون الأسود المطفي
+                        مع الشعار الأبيض واللمسات الحمراء تشكل
+                        إعلاناً متحركاً مجانياً يجوب الشوارع.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — MARKETING
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                14
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         15 — DIGITAL & DELIVERY
+         ===================================================== -->
+
+    <section class="slide">
+
+        <div class="starz-header">
+
+            <div class="header-brand">
+
+                <img data-asset="logo">
+
+                <span>STARZ™</span>
+
+            </div>
+
+            <div class="header-section">
+                الاستراتيجية الرقمية
+            </div>
+
+        </div>
+
+
+        <div class="section-label">
+            08 / DIGITAL & DELIVERY
+        </div>
+
+
+        <h2>
+            الاستراتيجية الرقمية والتوصيل
+        </h2>
+
+
+        <div class="two-column">
+
+
+            <div class="content-column">
+
+                <ul>
+
+                    <li>
+
+                        <strong>
+                            الاستراتيجية الرقمية والسوشيال ميديا:
+                        </strong>
+
+                        يعتمد السوق السوداني بشدة على المحتوى البصري.
+                        سيتركز التسويق على إنتاج محتوى عالي الجودة
+                        يركز على (المنتج، التغليف، وتجربة فتح الطلب).
+                        يهدف المحتوى لخلق حالة من الطلب والندرة
+                        (Scarcity) وبناء صورة ذهنية تربط
+                        "ستارز" بالجودة الفائقة.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            التركيز على تجربة التوصيل والاستلام
+                            (Pickup/Delivery):
+                        </strong>
+
+                        النموذج لا يعتمد حصرياً على الجلوس في الموقع.
+                        سيتم تحسين خدمة الطلب عبر (WhatsApp)
+                        والإنترنت لتكون سريعة وسلسة، لضمان أعلى
+                        معدل دوران للطلبات (High Throughput)
+                        خلال ساعات الذروة المسائية.
+
+                    </li>
+
+                </ul>
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-value">
+                            Scarcity
+                        </span>
+
+                        <span class="stat-label">
+                            خلق حالة طلب
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-value">
+                            WhatsApp
+                        </span>
+
+                        <span class="stat-label">
+                            توصيل سريع
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-value">
+                            High
+                        </span>
+
+                        <span class="stat-label">
+                            Throughput
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="visual-column">
+
+                <div class="image-card">
+
+                    <img
+                        data-asset="delivery"
+                        alt="STARZ Delivery">
+
+                    <div class="image-caption">
+                        STARZ™ — Delivery Experience
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="starz-footer">
+
+            <span>
+                STARZ™ — DIGITAL
+            </span>
+
+            <div class="footer-line"></div>
+
+            <span class="page-number">
+                15
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         16 — END
+         ===================================================== -->
+
+    <section class="slide end-slide">
+
+        <img
+            data-asset="logo"
+            alt="STARZ Logo">
+
+
+        <div class="end-title">
+
+            نهاية
+
+            <span>
+                الوثيقة
+            </span>
+
+        </div>
+
+
+        <p class="muted">
+            STARZ Burgers & Sandwiches™
+        </p>
+
+
+        <p
+            class="muted"
+            style="
+                font-size:10px !important;
+            ">
+
+            Internal Business Document — August 2026
+
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     NO REVEAL.JS
+     NO PRESENTATION LIBRARY
+     PURE MOBILE HTML/CSS
+     ========================================================= -->
+
+
+</body>
+
+</html>
